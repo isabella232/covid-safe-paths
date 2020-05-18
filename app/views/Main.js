@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useCallback, useEffect, useState } from 'react';
 import { AppState, BackHandler, StatusBar, View } from 'react-native';
 
+import tracingStrategy from '../../../COVIDSafePathsConfig';
 import { isPlatformAndroid } from './../Util';
 import { Icons } from '../assets';
 import { FeatureFlag } from '../components/FeatureFlag';
@@ -94,7 +95,7 @@ const Main = () => {
     if (location.reason === Reason.USER_OFF) {
       page = <OffPage />;
     } else {
-      page = <UnknownPage />;
+      page = <UnknownPage tracingStrategy={tracingStrategy} />;
     }
   }
 
