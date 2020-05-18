@@ -14,7 +14,6 @@ import { Icons, Images } from '../../assets';
 import { Button } from '../../components/Button';
 import { Typography } from '../../components/Typography';
 import { Theme } from '../../constants/themes';
-import { tracingStrategy } from '../../COVIDSafePathsConfig';
 import { MayoButton } from './MayoButton';
 import { styles } from './style';
 
