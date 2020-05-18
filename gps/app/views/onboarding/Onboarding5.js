@@ -439,7 +439,6 @@ class Onboarding extends Component {
             <View style={styles.contentContainer}>
               {this.getTitleTextView()}
               {this.getSubtitleText()}
-              {this.getSkipStepButton()}
               <View style={styles.statusContainer}>
                 {this.getLocationPermission()}
                 {this.getNotificationsPermissionIfIOS()}
@@ -449,6 +448,7 @@ class Onboarding extends Component {
             </View>
           </View>
           <View style={sharedStyles.footerContainer}>
+          {this.getSkipStepButton()}
             <Button
               label={this.getButtonText()}
               onPress={this.buttonPressed.bind(this)}
@@ -515,7 +515,9 @@ const styles = StyleSheet.create({
   },
   skipThisStepBtn: {
     color: Colors.DIVIDER,
-    paddingTop: 15,
+    marginBottom: 40,
+    textAlign: 'center',
+    fontSize: 20,
   },
 });
 
